@@ -58,14 +58,18 @@ void displayMenu() {
 }
 
 void displayAnim() {
+  int counter = 0;
   for (;;) {
     prepareDisplay();
     display.drawCircle((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2) - 10, 20, WHITE);
+    int x = counter >= 10 ? (SCREEN_WIDTH / 2) - 5 : (SCREEN_WIDTH / 2) - 2;
+    setText(String(counter), 1, x, (SCREEN_HEIGHT / 2) - 10);
+    counter++;
     display.display();
-    delay(1000);
+    delay(500);
     display.fillCircle((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2) - 10, 20, WHITE);
     display.display();
-    delay(1000);
+    delay(500);
   }
 }
 
