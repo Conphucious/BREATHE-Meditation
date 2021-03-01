@@ -22,8 +22,8 @@ void setup() {
   }
   delay(1000);
 
-  displayMenu();
-  delay(3000);
+//  displayMenu();
+//  delay(3000);
   displayAnim();
   
 }
@@ -58,11 +58,15 @@ void displayMenu() {
 }
 
 void displayAnim() {
-  prepareDisplay();
-  display.drawCircle(50, 50, 5, WHITE);
-  display.display();
-  delay(1000);
-  display.fillCircle(50, 50, 5, BLACK);
+  for (;;) {
+    prepareDisplay();
+    display.drawCircle((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2) - 10, 20, WHITE);
+    display.display();
+    delay(1000);
+    display.fillCircle((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2) - 10, 20, WHITE);
+    display.display();
+    delay(1000);
+  }
 }
 
 void findCenter() {
