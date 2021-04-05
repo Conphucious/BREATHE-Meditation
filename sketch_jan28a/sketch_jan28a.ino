@@ -73,7 +73,8 @@ void displayTitle() {
 void displayMenu() {
   prepareDisplay();
 
-  String techniqueName = String(cbt.inhaleIterations) + "-" + String(cbt.holdIteartions) + "-" + String(cbt.exhaleIterations);
+//  String techniqueName = String(cbt.inhaleIterations) + "-" + String(cbt.holdIterations) + "-" + String(cbt.exhaleIterations);
+  String techniqueName = "MEEP";
   setText(techniqueName, 2, 36, 0);
   setText("Technique", 1, 39, 25);
   display.drawFastHLine(0, 50, SCREEN_WIDTH, WHITE);
